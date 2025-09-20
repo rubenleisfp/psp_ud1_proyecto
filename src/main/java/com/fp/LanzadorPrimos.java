@@ -14,17 +14,7 @@ public class LanzadorPrimos {
      * @param fichResultado      nombre del fichero donde se escribira el resultado
      */
     public void lanzarPrimos(Integer n1, Integer n2, String fichResultado) {
-        String clase = "com.fp.PrimoProcess";
-        ProcessBuilder pb;
-        try {
-            pb = new ProcessBuilder(
-                    "java", "-cp", "target/classes", clase,
-                    n1.toString(), n2.toString());
-            pb.redirectOutput(new File(fichResultado));
-            pb.start();
-        } catch (Exception e) {
-            System.err.println("Error al lanzar el proceso: " + e.getMessage());
-        }
+        throw new UnsupportedOperationException("A completar por el estudiante");
     }
 
     public static void main(String[] args) {

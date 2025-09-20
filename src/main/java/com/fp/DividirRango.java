@@ -14,22 +14,7 @@ public class DividirRango {
      * @return una lista de sub-rangos (Rango) que dividieron el rango
      */
     public List<Rango> dividir(int minimo , int maximo, int numRangos) {
-        List<Rango> rangos = new ArrayList<>();
-        int totalNumeros = maximo - minimo + 1;  // Total de números a sumar
-        int salto = totalNumeros / numRangos;  // Cantidad de números por proceso
-        for (int i = 1; i <= numRangos; i++) {
-            int resultadoSumaConSalto = minimo + salto - 1;
-
-            // Si es el último proceso, sumamos el resto al último rango
-            if (i == numRangos) {
-                resultadoSumaConSalto = maximo;
-            }
-
-            Rango rango = new Rango(minimo,resultadoSumaConSalto);
-            rangos.add(rango);
-            minimo = resultadoSumaConSalto + 1;
-        }
-        return rangos;
+        throw new UnsupportedOperationException("A completar por el estudiante");
     }
 
     public static void main(String[] args) {

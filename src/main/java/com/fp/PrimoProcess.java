@@ -9,13 +9,7 @@ public class PrimoProcess {
      * @return el numero de primos entre n1 y n2
      */
     public int numeroPrimos(int n1, int n2) {
-        int contador = 0;
-        for (int i = n1; i <= n2; i++) {
-            if (esPrimo(i)) {
-                contador++;
-            }
-        }
-        return contador;
+        throw new UnsupportedOperationException("A completar por el estudiante");
     }
 
     /**
@@ -24,15 +18,7 @@ public class PrimoProcess {
      * @return true si el numero es primo, false en caso contrario
      */
     private boolean esPrimo(int n) {
-        if (n <= 1) {
-            return false;
-        }
-        for (int i = 2; i < n; i++) {
-            if (n % i == 0) {
-                return false;
-            }
-        }
-        return true;
+        throw new UnsupportedOperationException("A completar por el estudiante");
     }
 
     public static void main(String[] args) {

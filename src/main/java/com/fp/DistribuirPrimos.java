@@ -5,7 +5,7 @@ import java.util.List;
 
 public class DistribuirPrimos {
 
-    static final int NUM_PROCESOS = 2;
+    static final int NUM_PROCESOS = 5;
     static final String PREFIJO_FICHEROS = "fich";
 
 
@@ -18,35 +18,14 @@ public class DistribuirPrimos {
      */
     public static void main(String[] args) throws IOException, InterruptedException {
         //1. Crear una instancia de lanzadorSumador
-        LanzadorPrimos lanzadorPrimos = new LanzadorPrimos();
-
         //2. Obtener los valores minimo y maximo de nuestro rango
-        int minimo = 1;
-        int maximo = 100;
-
-        System.out.println("Primer argumento: " + minimo);
-        System.out.println("Segundo argumento: " + maximo);
-
         //3. Llamar a DividirRango para dividir el intervalo inicial entre el numero de procesos
-        DividirRango dividirRango = new DividirRango();
-        List<Rango> rangos = dividirRango.dividir(minimo, maximo, NUM_PROCESOS);
-
         //4. Iterar sobre los rangos obtenidos y llamar a lanzarPrimeros con el minimo, maximo y nombre de fichero(1,2,...n)
-        int i=1;
-        for (Rango rango: rangos) {
-            String nombreFich = PREFIJO_FICHEROS + i;
-            lanzadorPrimos.lanzarPrimos(rango.getMinimo(), rango.getMaximo(), nombreFich);
-            i++;
-        }
-
         //5. Esperamos un tiempo prudente para que todos los procesos terminen
-        Thread.sleep(5000);
-
         //6. Llamar a getSumaTotal para obtener la suma parcial de cada proceso y sumarla
-        int sumaTotal = getCalculoTotal(NUM_PROCESOS);
-
         //7. Mostrar el resultado por pantalla
-        System.out.println("N mero total de primos: " + sumaTotal);
+        throw new UnsupportedOperationException("A completar por el estudiante");
+
     }
 
 
@@ -59,11 +38,7 @@ public class DistribuirPrimos {
     public static int getCalculoTotal(int numFicheros) {
         // Iterar sobre cada fichero creado y obtener el calculo parcial del mismo llamando a getResultadoFichero
         // Sumar los calculos parciales
-        int sumaTotal = 0;
-        for (int i = 1; i <= numFicheros; i++) {
-            sumaTotal += getResultadoFichero(PREFIJO_FICHEROS + i);
-        }
-        return sumaTotal;
+        throw new UnsupportedOperationException("A completar por el estudiante");
     }
 
 
@@ -76,21 +51,6 @@ public class DistribuirPrimos {
      * @return
      */
     public static int getResultadoFichero(String nombreFichero) {
-        int suma = 0;
-        try (FileInputStream fichero = new FileInputStream(nombreFichero);
-             InputStreamReader fir = new InputStreamReader(fichero);
-             BufferedReader br = new BufferedReader(fir)) {
-
-            String linea = br.readLine();
-            suma = Integer.parseInt(linea); // Cambiado a parseInt
-
-        } catch (FileNotFoundException e) {
-            System.out.println("No se pudo abrir " + nombreFichero);
-        } catch (IOException e) {
-            System.out.println("No hay nada en " + nombreFichero);
-        } catch (NumberFormatException e) {
-            System.out.println("Formato de número incorrecto en " + nombreFichero);
-        }
-        return suma;
+        throw new UnsupportedOperationException("A completar por el estudiante");
     }
 }
