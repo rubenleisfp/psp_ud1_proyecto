@@ -10,19 +10,19 @@ public class DistribuirPrimos {
 
 
     /**
-     * Punto de entrada de la clase. Se encarga de lanzar los procesos que calculan el n mero de primos en un rango determinado
-     * y de sumar los resultados parciales de cada proceso
+     * Punto de entrada de la clase. Se encarga de lanzar los procesos que calculan el numero de primos
+     * en un rango determinado y de sumar los resultados parciales de cada proceso
      *
      * @throws IOException si hay un problemao al abrir el fichero
      * @throws InterruptedException si hay un problemao al esperar a que terminen los procesos
      */
     public static void main(String[] args) throws IOException, InterruptedException {
-        //1. Crear una instancia de lanzadorSumador
+        //1. Crear una instancia de LanzadorPrimos
         //2. Obtener los valores minimo y maximo de nuestro rango
         //3. Llamar a DividirRango para dividir el intervalo inicial entre el numero de procesos
-        //4. Iterar sobre los rangos obtenidos y llamar a lanzarPrimeros con el minimo, maximo y nombre de fichero(1,2,...n)
+        //4. Iterar sobre los rangos obtenidos y llamar a LanzadorPrimos con el minimo, maximo y nombre de fichero(1,2,...n)
         //5. Esperamos un tiempo prudente para que todos los procesos terminen
-        //6. Llamar a getSumaTotal para obtener la suma parcial de cada proceso y sumarla
+        //6. Llamar a getCalculoTotal para obtener el resultado parcial de cada fichero
         //7. Mostrar el resultado por pantalla
         throw new UnsupportedOperationException("A completar por el estudiante");
 
@@ -32,7 +32,7 @@ public class DistribuirPrimos {
     /**
      * Obtiene la suma total de los resultados parciales de cada fichero
      *
-     * @param numFicheros numero de ficheros que quiero sumar
+     * @param numFicheros numero de ficheros
      * @return suma total de los resultados parciales
      */
     public static int getCalculoTotal(int numFicheros) {
